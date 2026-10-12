@@ -1,7 +1,5 @@
-import WorkItem, { type ItemProps } from "./work-item";
+import WorkItem from "./work-item";
 import {items} from "./items"
-import { descriptions } from "./descriptions";
-import { useState } from "react";
 
 /*const items = [
     {name:"Crabble", year:2026, desc:"Web game about crabs in a bucket", pict:"src/assets/m-stereophyta.png"},
@@ -16,7 +14,7 @@ export default function Works(){
     function displayWorks(){
         return ( <div className="py-8 works grid lg:grid-cols-3 flex justify-center justify-items-center">
             {items.map((i) => {
-                return <WorkItem item={i}/>
+                return <WorkItem props={i}/>
             })}
         </div>);
     }

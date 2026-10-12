@@ -12,10 +12,10 @@ export default function WorkItem(props){
     
     function renderCollapsed(){
         return ( <div onClick={handleClick} className="bg-slate-300 text-black justify-items-center justify-content-center h-100 p-4 m-4 rounded-xl hover:drop-shadow-xl">
-            <h2>{props.item.name}</h2>
-            <img className="scale-with-grid aspect-auto w-sm h-60" src={props.item.pict}/>
-            <h3>{props.item.year}</h3>
-            <p>{props.item.desc}</p>
+            <h2>{props.name}</h2>
+            <img className="scale-with-grid aspect-auto w-sm h-60" src={props.pict}/>
+            <h3>{props.year}</h3>
+            <p>{props.desc}</p>
             <div>
             </div>
         </div>);
@@ -25,7 +25,7 @@ export default function WorkItem(props){
     }
 
     function handleClick(){
-        console.log(props.item.name);
+        console.log(props.name);
         setCollapsed(!collapsed);
     }
     return(collapsed ? renderCollapsed() : renderUnrolled());
